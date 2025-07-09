@@ -1,1 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit";
+
+  --text-primary-color: #000000;
+
+  --brand-black: #1a1a1a;
+  --brand-grey: #707070;
+
+  --heading-w: 75rem;
+
+  --card-h: 36.5rem;
+  --card-wide-w: 36.5rem;
+  --card-nowide-w: 18.313rem;
+  --card-surface: #f7f7f7;
+
+  --cardGrid-space-between: 15px;
+}
+
+@layer components {
+  .h2 {
+    font-family: var(--font-outfit), sans-serif;
+    @apply text-(--text-primary-color) font-semibold text-5xl leading-[1.2] -tracking-[0.02em];
+  }
+
+  .text-light-18-18 {
+    font-family: var(--font-outfit), sans-serif;
+    @apply text-(--brand-black) font-light text-[18px] leading-[1.5];
+  }
+
+  .card-description-text {
+    font-family: var(--font-outfit), sans-serif;
+    @apply text-(--brand-grey) font-normal text-[20px] leading-[1.25] -tracking-[0.01em];
+  }
+
+  .card-wide-title-text {
+    font-family: var(--font-outfit), sans-serif;
+    @apply text-[200px] font-normal leading-[1] -tracking-[0.04em];
+  }
+
+  .card-title-text {
+    font-family: var(--font-outfit), sans-serif;
+    @apply font-medium text-[120px] leading-[1] -tracking-[0.02em];
+  }
+
+  .card {
+    @apply h-(--card-h) bg-(--card-surface) flex overflow-hidden;
+  }
+
+  .heading {
+    @apply w-(--heading-w) flex flex-col items-center space-y-4;
+  }
+}
