@@ -35,7 +35,7 @@ export default function Homepage() {
   return (
     <main className="flex flex-col space-y-[60px]">
       <Heading headline={heading.headline} description={heading.description} />
-      <CardGrid>{cards.slice(0)}</CardGrid>
+      <CardGrid>{cards}</CardGrid>
     </main>
   );
 }
