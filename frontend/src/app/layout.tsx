@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "300codes app",
   description: "For 300codes interview",
 };
+import { ReactQueryProvider } from "@/lib/react-query-provider";
 
 export default function RootLayout({
   children,
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex justify-center items-center min-h-screen min-w-screen">
+        <ReactQueryProvider>{children}</ReactQueryProvider>
+      </body>
     </html>
   );
 }
